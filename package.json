@@ -1,0 +1,12 @@
+{
+  "name": "todolist",
+  "version": "1.0.0",
+  "description": "Simple TodoList app with JSON Server",
+  "main": "Bill.js",
+  "dependencies": {
+    "json-server": "^0.17.0"
+  },
+  "scripts": {
+    "start": "json-server --watch bills.json --port $PORT"
+  }
+}
