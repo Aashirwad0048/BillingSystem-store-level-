@@ -1,4 +1,4 @@
-const API = "https://billingsystem-store-level-2.onrender.com";
+const API = "https://billingsystem-store-level-2.onrender.com/bills";
 
 const input1 = document.getElementById("name");
 const input2 = document.getElementById("quantity");
