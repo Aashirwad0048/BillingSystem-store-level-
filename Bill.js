@@ -1,4 +1,4 @@
-const API = "http://localhost:3000/bills";
+const API = "https://billingsystem-store-level-2.onrender.com";
 
 const input1 = document.getElementById("name");
 const input2 = document.getElementById("quantity");
@@ -96,13 +96,11 @@ function updateTotals() {
 window.onafterprint = async function () {
     if (!confirm("Clear bill after printing?")) return;
 
-    const res = await fetch("http://localhost:3000/bills");
+    const res = await fetch(API);
     const items = await res.json();
 
     for (let item of items) {
-        await fetch(`http://localhost:3000/bills/${item.id}`, {
-            method: "DELETE"
-        });
+        await fetch(`${API}/${item.id}`, { method: "DELETE" });
     }
 
     location.reload();
